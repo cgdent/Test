@@ -1,0 +1,28 @@
+{
+  "name": "test",
+  "version": "1.0.1",
+  "description": "A Snyk test application",
+  "homepage": "https://snyk.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cgdent/Test/"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "build": "browserify -r jquery > public/js/bundle.js",
+    "cleanup": "mongo express-todo --eval 'db.todos.remove({});'",
+    "test": "snyk test"
+  },
+  "engines": {
+    "node": "6.14.1"
+  },
+  "dependencies": {
+    "lodash": "4.17.15",
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "snyk": "^1.244.0"
+  },
+  "license": "Apache-2.0"
+}
+© 2020 GitHub, Inc.
